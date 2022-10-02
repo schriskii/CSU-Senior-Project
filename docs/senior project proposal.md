@@ -27,7 +27,8 @@ access to an easy, templated way to create menus for their game. However, the
 default options that come with game engines are not right for every game. Godot,
 for example, has a default UI system, but it is somewhat obtuse and has features
 that can get in the way of games with simpler needs - e.g. its mouse support can
-get messy for controller-only games.
+get messy for controller-only games, and the way its graphics work can impede
+certain art styles such as pixel art.
 
 My project implements a custom UI system into Godot, which makes it quick and
 easy for game developers to create menu systems. It also implements a stack,
@@ -68,6 +69,11 @@ the user to more precisely define behaviors such as input buffering, as well as
 to change the input mapping while the game is running (useful for implementing
 custom controls in a game). This will be used for the menus but can also be
 referenced by other code to, for example, control the player character.
+
+**Example assets:** The project will come bundled with a selection of pixel art
+graphics for the buttons and menu objects. In general, this project will be designed
+with pixel art in mind, but in principle it will be usable with higher-resolution
+assets as well.
 
 Proposed Implementation Language:
 =================================
