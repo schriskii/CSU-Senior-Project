@@ -21,51 +21,58 @@ May 2023
 Problem Statement:
 ==================
 
-In an online video game, input lag (the delay between pressing a button and the
-onscreen action being performed) should be kept as low as possible for a smooth
-and pleasant playing experience. However, the need to keep the game calculations
-in sync for both players means that if the network connection has latency, input
-lag must be increased to compensate. This input lag, if severe enough, can ruin
-many timing-based action games. For example, *Super Smash Bros. Ultimate*
-was excluded from a prominent online fighting game tournament for this reason (1).
-“Rollback netcode” largely solves this problem but requires changes to the
-structure of a game's source code. My project implements rollback netcode as
-an extension to Godot, a game creation framework. My implementation will be
-easy and intuitive so that it can be tucked behind the scenes. Therefore, new
-game developers, such as myself, will be able to take advantage of rollback
-netcode without having to implement it manually.
+In video game development, almost any game will need some sort of user interface
+to select gameplay modes and options. Ideally, then, game developers should have
+access to an easy, templated way to create menus for their game. However, the
+default options that come with game engines are not right for every game. Godot,
+for example, has a default UI system, but it is somewhat obtuse and has features
+that can get in the way of games with simpler needs - e.g. its mouse support can
+get messy for controller-only games.
 
-1.  https://www.thegamer.com/smash-ultimates-netcode-too-bad-evo/
+My project implements a custom UI system into Godot, which makes it quick and
+easy for game developers to create menu systems. It also implements a stack,
+created to allow easy implementation of layered menu trees, e.g. an environment
+where the user needs to dig into various sub-menus to find options. Lastly, it
+includes a framework to handle controller and keyboard input, which can then be
+used to control the rest of the game - not just the menus.
 
 Project Description:
 ====================
 
-Rollback netcode is a type of network coding which avoids input lag. With a slow
-connection, rollback does not introduce a large input delay to account for the
-network latency. Instead, if it has not yet received a signal, it predicts that
-the other player will not press any buttons (or stop holding any buttons) and
-continues to process the game state. If an update arrives and the prediction
-turned out to be false, the game "rolls back", rewinding to the last time the
-two clients were in sync, and then re-processes those game ticks with the new
-information. In other words, instead of waiting for the other player's input
-data, it ignores the missing data and then corrects any mistakes that pop up.
+My project will consist of a selection of Godot scenes and scripts that allow the
+game developer ("user") to easily and quickly create menus in their Godot games.
+It will consist of the following components.
 
-My project will be a Godot engine module that handles saving game states,
-syncing two clients over the network, and reloading/resimulating game states. It
-will efficiently store game state information in an internal data structure and
-expose it to the user for reference when needed. It will also use existing Godot
-infrastructure (2) to communicate with clients over the network and handle
-rollback netcode according to the procedure described above. Users will be able
-to connect to the module's API to trigger rollbacks manually, determine which
-game state data should be logged, and execute additional code when a rollback
-occurs.
+Menu buttons: There will be a menu button scene, with states for being hovered
+over, being clicked, and being disabled. When the player clicks the button, it
+will emit a Godot signal that other code can then hook onto to perform actions.
+There will also be specialty buttons for common tasks, such as toggling a value
+on/off or selecting from a list.
 
-2.  https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html
+Menu scenes: These buttons will be contained inside menu scenes, which allow the
+arrangement of buttons on the screen according to the user's wishes. These scenes
+can hold any other Godot objects too, such as onscreen graphics. They could be
+used for heads-up display elements, not just proper menus.
+
+Menu stack: These menu scenes will be contained inside a menu stack, which is a
+constantly-loaded object that maintains a stack of menu scenes. When the player
+clicks a button to open a new menu, it gets placed at the top of the stack, and
+when the player presses the "back" button, the top element of the stack will be
+popped. This maintains navigation logic similarly to a file explorer's address
+bar. The user will be able to control specific behaviors such as whether or not
+inputs are allowed to propogate down the stack (on a per-menu basis).
+
+Input controller: There will also be an object to handle controller and keyboard
+input. Compared to Godot's built-in input mapping system, this object will allow
+the user to more precisely define behaviors such as input buffering, as well as
+to change the input mapping while the game is running (useful for implementing
+custom controls in a game). This will be used for the menus but can also be
+referenced by other code to, for example, control the player character.
 
 Proposed Implementation Language:
 =================================
 
-C++
+GDScript
 
 Libraries, Packages, Development Kits, etc:
 ===========================================
@@ -75,44 +82,37 @@ Godot Engine
 Additional Software/Equipment Needed:
 =====================================
 
-Visual Studio Code, GitHub
+GitHub
 
 Personal Motivation:
 ====================
 
 I make games as a hobby and have been working on a versatile foundation for my
-games in my free time. I would like to be able to easily add online play to my
-games in the future. In particular, one of my dream projects is an online
-fighting game, and in that genre, rollback is quickly becoming an expected
-standard thanks to the snappy online gameplay it offers. Also, this will be a
-great opportunity to learn about networking in general.
+games in my free time. All of the menus in my games so far have been quick,
+bodged-together solutions. This project would give me a way to avoid redundancy
+in my code, increasing maintainability and flexibility.
 
 Outline of Future Research Efforts:
 ===================================
 
-For this project, I will need to learn how to make Godot modules in C++. I will
-also need to research Godot's networking options more in-depth and find the best
-fit for my purpose. Lastly, I will need to find the best way to optimize the
-relatively large amounts of memory read/write required for this task (aided by
-the use of C++ instead of Godot's standard Python-style GDScript).
+For this project, I will need to research the various kinds of engine extension
+available in Godot and determine how this project should be packaged.
 
 Tentative Schedule:
 ===================
 
-April 12, 2022:
-- Develop the system for saving and reloading past game states.
-
-August 31, 2022:
-- Research Godot's native networking options and find the best fit.
-
-September 30, 2022:
-- Implement rollback netcode.
+October 15, 2022:
+- Choose a broad implementation plan within Godot (e.g. module? extension?)
+- Implement the four main components on a basic level: one menu at a time, only basic buttons.
 
 October 31, 2022:
-- Flesh out the user-end API.
-- Develop test plan.
-- Begin to test the module within my work-in-progress games as well as dedicated testing projects.
-- Begin to evaluate test results.
+- Implement a second button type.
+- Implement button theme switching.
+- Implement menu stack behavior with >1 menu.
+
+November 15, 2022:
+- Wrap up development by implementing any remaining functionality.
+- Finish test plan.
 
 April 30, 2023:
 - Complete and present defense documentation.
