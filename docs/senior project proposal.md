@@ -43,18 +43,18 @@ My project will consist of a selection of Godot scenes and scripts that allow th
 game developer ("user") to easily and quickly create menus in their Godot games.
 It will consist of the following components.
 
-Menu buttons: There will be a menu button scene, with states for being hovered
+**Menu buttons:** There will be a menu button scene, with states for being hovered
 over, being clicked, and being disabled. When the player clicks the button, it
 will emit a Godot signal that other code can then hook onto to perform actions.
 There will also be specialty buttons for common tasks, such as toggling a value
-on/off or selecting from a list.
+on/off or selecting from a list; these will inherit from the regular button.
 
-Menu scenes: These buttons will be contained inside menu scenes, which allow the
+**Menu scenes:** These buttons will be contained inside menu scenes, which allow the
 arrangement of buttons on the screen according to the user's wishes. These scenes
 can hold any other Godot objects too, such as onscreen graphics. They could be
 used for heads-up display elements, not just proper menus.
 
-Menu stack: These menu scenes will be contained inside a menu stack, which is a
+**Menu stack:** These menu scenes will be contained inside a menu stack, which is a
 constantly-loaded object that maintains a stack of menu scenes. When the player
 clicks a button to open a new menu, it gets placed at the top of the stack, and
 when the player presses the "back" button, the top element of the stack will be
@@ -62,7 +62,7 @@ popped. This maintains navigation logic similarly to a file explorer's address
 bar. The user will be able to control specific behaviors such as whether or not
 inputs are allowed to propogate down the stack (on a per-menu basis).
 
-Input controller: There will also be an object to handle controller and keyboard
+**Input controller:** There will also be an object to handle controller and keyboard
 input. Compared to Godot's built-in input mapping system, this object will allow
 the user to more precisely define behaviors such as input buffering, as well as
 to change the input mapping while the game is running (useful for implementing
