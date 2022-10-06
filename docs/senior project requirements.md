@@ -1,9 +1,172 @@
-**`01` Description of the requirement.**
+**`00` Template.**
 - `Rationale` Reason for the requirement.
 - `Fit Criterion` Specific requirement.
 - `Type` Functional
 - `Priority` 1
 - `Prerequisites` n/a
+
+**`01` The user should be able to place buttons in a menu scene for a player to navigate with directional / button inputs.**
+- `Rationale` This is the basic functionality of the plugin.
+- `Fit Criterion` The user can place three columns of buttons in a menu and access each one.
+- `Type` Functional
+- `Priority` 3
+- `Prerequisites` n/a
+
+**`02` The user should be able to override button neighbor assignments by manually assigning up/down/left/right neighbors.**
+- `Rationale` Sometimes the automatic column-based navigation isn't sufficient for odd menu layouts.
+- `Fit Criterion` The user can assign another button node to be a neighbor in a button's export variables.
+- `Type` Functional
+- `Priority` 3
+- `Prerequisites` 01
+
+**`02` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`03` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`04` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`05` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`06` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`07` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`08` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`09` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`10` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`11` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`12` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`13` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`14` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`15` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`16` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`17` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`18` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`19` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`20` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`21` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+**`22` Template.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+
 
 Old Below
 =========
