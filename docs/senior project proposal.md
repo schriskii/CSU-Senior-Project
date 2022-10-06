@@ -102,10 +102,18 @@ Outline of Future Research Efforts:
 ===================================
 
 For this project, I will need to research the various kinds of engine extension
-available in Godot and determine how this project should be packaged.
+available in Godot and determine how this project should be packaged. Some methods -
+modules, GDNative, and Godot 4's upcoming GDExtension - use C++ code to extend the
+engine. For this project, since it doesn't demand the performance of C++, I'm
+expecting to instead use Godot's plugin system, which uses regular GDScript code and
+Godot scenes.
 
 Tentative Schedule:
 ===================
+
+October 7, 2022:
+- Create a draft requirements document.
+- Create a draft test plan.
 
 October 15, 2022:
 - Choose a broad implementation plan within Godot (e.g. module? extension?)
@@ -119,6 +127,9 @@ October 31, 2022:
 November 15, 2022:
 - Wrap up development by implementing any remaining functionality.
 - Finish test plan.
+
+May 30, 2023:
+- Implement test plan.
 
 April 30, 2023:
 - Complete and present defense documentation.
