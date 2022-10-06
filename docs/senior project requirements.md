@@ -10,7 +10,7 @@
 - `Fit Criterion` The user can place three columns of buttons in a menu and access each one.
 - `Type` Functional
 - `Priority` 3
-- `Prerequisites` n/a
+- `Prerequisites` 10
 
 **`02` The user should be able to override button neighbor assignments by manually assigning up/down/left/right neighbors.**
 - `Rationale` Sometimes the automatic column-based navigation isn't sufficient for odd menu layouts.
@@ -103,54 +103,54 @@
 - `Priority` 3
 - `Prerequisites` 05
 
-**`15` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`15` The user should be able to create and select custom button themes.**
+- `Rationale` In a game, different buttons often require different graphics and animations.
+- `Fit Criterion` The user can create different button themes and select them in a dropdown for each button.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 2
+- `Prerequisites` 14
 
-**`16` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`16` Buttons should have a fifth state for when the button is hovered but not at the top of the stack.**
+- `Rationale` For certain menus, having this state would be useful for UI clarity.
+- `Fit Criterion` The fifth state is implemented and has its own graphics.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 2
+- `Prerequisites` 05
 
-**`17` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`17` The plugin should include an on-off toggle button.**
+- `Rationale` Toggling an option on and off is a common UI element in games.
+- `Fit Criterion` There is a scene that extends the basic button with this functionality.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 2
+- `Prerequisites` 01
 
-**`18` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`18` The plugin should include a button to select options from a list.**
+- `Rationale` Selecting from a list of options is a common UI element in games.
+- `Fit Criterion` There is a scene that extends the basic button with this functionality.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 2
+- `Prerequisites` 01
 
-**`19` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`19` The plugin should include a button that acts as a slider.**
+- `Rationale` Selecting a number value on a slider is a common UI element in games.
+- `Fit Criterion` There is a scene that extends the basic button with this functionality.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 2
+- `Prerequisites` 01
 
-**`20` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`20` The menu stack should have an option to display button prompts onscreen.**
+- `Rationale` Onscreen button prompts are a common element in games which help with accessibility and ease-of-use.
+- `Fit Criterion` The menu stack node displays text and symbols along the bottom of the screen which show button prompts such as "B to go back", "A to select", etc. Menu scenes that are accepting inputs can supply prompts to be displayed here.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 2
+- `Prerequisites` 07, 10
 
-**`21` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`21` There should be an option to create scrolling lists of buttons.**
+- `Rationale` In situations where not all buttons fit onscreen at once, a scrolling list is useful.
+- `Fit Criterion` The user can create columns of buttons that scroll vertically.
 - `Type` Functional
 - `Priority` 1
-- `Prerequisites` n/a
+- `Prerequisites` 07
 
 **`22` Template.**
 - `Rationale` Reason for the requirement.
