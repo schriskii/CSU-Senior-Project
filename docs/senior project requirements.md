@@ -152,12 +152,26 @@
 - `Priority` 1
 - `Prerequisites` 07
 
-**`22` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`22` The menus should have mouse support.**
+- `Rationale` This plugin is designed for games that use a controller, but mouse support is always nice.
+- `Fit Criterion` The player can navigate the menus with a mouse. Hover states and such work appropriately.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` 01
+
+**`23` The menus should support multiple players navigating a menu at once.**
+- `Rationale` This could be useful for certain menus in multiplayer games.
+- `Fit Criterion` Each player has a cursor to navigate the game's menus. A menu scene can be specified to either support or not support multiple cursors.
 - `Type` Functional
 - `Priority` 1
 - `Prerequisites` n/a
+
+**`24` The menu scene should come with animations for opening/closing the menu.**
+- `Rationale` Opening a new menu with no transition would be jarring. A swipe, fade, etc. makes menus feel much more professional and polished.
+- `Fit Criterion` The user can specify which animation a menu should have when opened or closed.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` 07
 
 
 
