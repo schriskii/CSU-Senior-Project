@@ -68,40 +68,40 @@
 - `Priority` 3
 - `Prerequisites` 07
 
-**`10` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`10` The plugin should include an input handler to bind controller or keyboard inputs to specific actions.**
+- `Rationale` Compared to Godot's native input mapping, this system will give the user more control over behaviors such as buffering and live remapping.
+- `Fit Criterion` The node exists.
 - `Type` Functional
-- `Priority` 1
+- `Priority` 3
 - `Prerequisites` n/a
 
 **`11` The menu stack should support a universal button to pop from the menu stack.**
 - `Rationale` Many games use a universal button, commonly the B button, to go back to the previous menu.
-- `Fit Criterion` The user can specify a button, or collection 
+- `Fit Criterion` The user can specify a button, or collection of buttons, to have this behavior.
 - `Type` Functional
-- `Priority` 1
+- `Priority` 3
+- `Prerequisites` 07, 10
+
+**`12` Menu scenes should be able to specify whether or not they allow inputs to propagate down the menu stack.**
+- `Rationale` Most of the time in a game, inputs should not be allowed to reach menus other than the one at the top of the menu stack (since that is just the previous menu the player accessed). Sometimes, however, an overlay menu may require inputs to propagate downward.
+- `Fit Criterion` The user can specify this behavior for each menu scene, for both incoming and outgoing inputs, as well as on a per-input basis. Also, the user can access A) the initial (pre-propagation) input state and B) the final (post-propagation) input states.
+- `Type` Functional
+- `Priority` 3
+- `Prerequisites` 07, 10
+
+**`13` The plugin should be adequately documented.**
+- `Rationale` Documentation is good.<sup>[citation needed]</sup>
+- `Fit Criterion` The code is commented, and a readme is included with the plugin as a usage guide.
+- `Type` Usability / Personalization
+- `Priority` 3
 - `Prerequisites` n/a
 
-**`12` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`14` Example pixel art graphics should be included with the plugin.**
+- `Rationale` Example graphics will help users understand how the plugin should be used and help it work out of the box.
+- `Fit Criterion` A graphic is included for each of the four key button states.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
-
-**`13` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
-- `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
-
-**`14` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
-- `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 3
+- `Prerequisites` 05
 
 **`15` Template.**
 - `Rationale` Reason for the requirement.
