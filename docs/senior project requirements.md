@@ -1,3 +1,13 @@
+**`01` Description of the requirement.**
+- `Rationale` Reason for the requirement.
+- `Fit Criterion` Specific requirement.
+- `Type` Functional
+- `Priority` 1
+- `Prerequisites` n/a
+
+Old Below
+=========
+
 Requirement #01
 ===============
 
