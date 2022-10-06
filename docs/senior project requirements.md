@@ -19,61 +19,54 @@
 - `Priority` 3
 - `Prerequisites` 01
 
-**`02` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`03` The plugin includes a custom text scene designed to handle pixel fonts.**
+- `Rationale` This will make it easy for users to add outlines and drop shadows to their text.
+- `Fit Criterion` The user can instance the scene and create custom text.
 - `Type` Functional
-- `Priority` 1
+- `Priority` 3
 - `Prerequisites` n/a
 
-**`03` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`04` Buttons should have text labels that the user can edit.**
+- `Rationale` Labeling buttons is important for UI design.<sup>[citation needed]</sup>
+- `Fit Criterion` The user can assign text to a button.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 3
+- `Prerequisites` 03
 
-**`04` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`05` Buttons should have states for sitting idle, being hovered, being clicked, and being disabled. Each state should have an animation and a different graphic.**
+- `Rationale` Animations and graphics for interacting with buttons makes game menus more intuitive and easier to use.
+- `Fit Criterion` The three former states exist and work properly when the player interacts with them. The user can mark a button as disabled to prevent the player from interacting with it.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 3
+- `Prerequisites` 01
 
-**`05` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`06` Buttons should have signals for being hovered, unhovered, and pressed.**
+- `Rationale` Godot's signal system is a common way to have nodes interact with one another. This functionality is important so that the user can assign functionality to a button.
+- `Fit Criterion` The three signals exist and are emitted at the appropriate time.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 3
+- `Prerequisites` 05
 
-**`06` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`07` A menu stack node should exist which allows the layering of several menus at once.**
+- `Rationale` This will be useful for multi-layered menu navigation.
+- `Fit Criterion` The menu stack node can contain multiple menu scenes, and can push/pop on demand.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 3
+- `Prerequisites` 01
 
-**`07` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
-- `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+**`08` The menu stack should be able to contain many menu scenes at once.**
+- `Rationale` Some games will need deep menu trees where the player clicks through many menus to find an appropriate option.
+- `Fit Criterion` The menu stack can hold 10 menus without causing slowdown.
+- `Type` Capacity, Performance
+- `Priority` 3
+- `Prerequisites` 07
 
-**`08` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`09` The menu stack should support pushing or popping to a specific menu.**
+- `Rationale` Some games need shortcuts to other places in the game's menus: e.g. a game may need to send you deep into the options menu, and when the player pops from the stack by pressing the "back" button, it should send them to the outer layer of the options menu, not the menu they were previously in.
+- `Fit Criterion` The user can specify a tree of menu scenes to push to the menu stack, or a menu scene to find by popping from the menu stack.
 - `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
-
-**`09` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
-- `Type` Functional
-- `Priority` 1
-- `Prerequisites` n/a
+- `Priority` 3
+- `Prerequisites` 07
 
 **`10` Template.**
 - `Rationale` Reason for the requirement.
@@ -82,9 +75,9 @@
 - `Priority` 1
 - `Prerequisites` n/a
 
-**`11` Template.**
-- `Rationale` Reason for the requirement.
-- `Fit Criterion` Specific requirement.
+**`11` The menu stack should support a universal button to pop from the menu stack.**
+- `Rationale` Many games use a universal button, commonly the B button, to go back to the previous menu.
+- `Fit Criterion` The user can specify a button, or collection 
 - `Type` Functional
 - `Priority` 1
 - `Prerequisites` n/a
