@@ -14,7 +14,7 @@ Tests
 
 **`D` Move the cursor rapidly and ensure that the button's hovered state updates appropriately, and that the signals are emitted.**
 
-**'E' Add many buttons to a menu and ensure that the game doesn't slow down below 60fps.**
+**`E` Add many buttons to a menu and ensure that the game doesn't slow down below 60fps.**
 
 **`F` Open 10 menus in the stack and ensure that the game doesn't slow down below 60fps.**
 
