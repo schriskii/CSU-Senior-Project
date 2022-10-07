@@ -108,6 +108,11 @@ engine. For this project, since it doesn't demand the performance of C++, I'm
 expecting to instead use Godot's plugin system, which uses regular GDScript code and
 Godot scenes.
 
+Aside from that, thought will need to be put into organizing the code and assets
+generally. Godot uses several different types of "objects" - scripts, scenes, and
+nodes. For each of the objects detailed in the project description, a different one
+of these will likely be optimal for the project's organization and ease of use.
+
 Tentative Schedule:
 ===================
 
