@@ -1,7 +1,9 @@
-About
+Introduction
 =====
 
-This document lists the tests that will be performed on the plugin.
+This document lists the tests that will be performed on the plugin. The goal of these tests will be to make sure that users can create menus that fit all of their needs, as per the requirements document found in the same folder as this test plan. Specifically, the menu plugin will be tested, including the part of it that handles controller inputs as well as the actual menu object templates.
+
+Naturally, testing will be conducted using the Godot Engine and a blank test project. Most tests will involve creating a sample menu scene and ensuring that everything works as it should.
 
 Tests
 =====
