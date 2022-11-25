@@ -23,6 +23,8 @@ Create a small grid of buttons, then set the neighbor properties of some buttons
 
 **`C` Use long text strings for button labels and ensure that strings of reasonable length will fit.**
 
+Test single-line and multi-line strings.
+
 **`D` Move the cursor rapidly and ensure that the button's hovered state updates appropriately.**
 
 Create a menu and move the cursor very quickly back-and-forth. Make sure that buttons don't stay hovered when they shouldn't be.
@@ -64,7 +66,7 @@ Create a MnoSelectableGroup and make it scroll. Line up lots of buttons and ensu
 
 **`M` Ensure that hovering and selecting buttons works with the mouse.**
 
-TBD; mouse support not in yet / may be dropped from scope.
+Use a MnoCursorRenderer with mouse support enabled, and move the cursor around a menu to make sure that hovering and clicking work as expected.
 
 **`N` Ensure that switching between different controllers works as expected.**
 
