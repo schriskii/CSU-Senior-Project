@@ -16,7 +16,7 @@ My project implements a custom UI system into Godot, which makes it quick and ea
 
 ## Research and Background
 
-I have a history of making game projects in Godot, so not that much preliminary research was required.
+I have a history of making game projects in Godot, so not that much preliminary research was required. I did need to investigate the different types of Godot plugin, and settled on writing mine in GDScript.
 
 ## Project Language, Software, and Hardware
 
