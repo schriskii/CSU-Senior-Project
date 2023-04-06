@@ -24,7 +24,7 @@ The project was created in Godot 3.x using its GDScript programming language. Al
 
 ## Project Requirements
 
-See [project requirements document](senior project requirements.md).
+See [project requirements document](<./senior project requirements.md>).
 
 ## Project Implementation Description and Explanation
 
@@ -34,7 +34,7 @@ h
 
 ## Test Plan and Test Results
 
-See [test plan document](test plan.md) (which includes test results).
+See [test plan document](<./test plan.md>) (which includes test results).
 
 ## Challenges Overcome
 
