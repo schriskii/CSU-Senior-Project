@@ -30,7 +30,9 @@ See [project requirements document](<./senior project requirements.md>).
 
 See [code repository](https://github.com/muno777/mno_menus).
 
-h
+![Screenshot of the plugin](<./mno menus screenshot.png>)
+
+*Fig. 1 - A screenshot of the plugin being used in the Godot Engine editor.*
 
 ## Test Plan and Test Results
 
