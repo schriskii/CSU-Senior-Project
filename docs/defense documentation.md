@@ -28,11 +28,13 @@ See [project requirements document](<./senior project requirements.md>).
 
 ## Project Implementation Description and Explanation
 
-See [code repository](https://github.com/muno777/mno_menus).
-
 ![Screenshot of the plugin](<./mno menus screenshot.png>)
 
 *Fig. 1 - A screenshot of the plugin being used in the Godot Engine editor.*
+
+This is a plugin for use in the Godot Engine editor, used to create menus for selecting options in a game. The user can create menu scenes and add buttons to them, then use code to instantiate in the game.
+
+See [code repository](https://github.com/muno777/mno_menus) for further documentation, including a quick start guide.
 
 ## Test Plan and Test Results
 
