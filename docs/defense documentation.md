@@ -50,4 +50,4 @@ In the future, I'll be remaking this project in Godot 4 for use with my future g
 
 ## Defense Presentation Slides
 
-h
+See [slideshow](https://docs.google.com/presentation/d/1FsIsOjYohLYRDzRfXj20DSDJWtEGFXfYjdSsbLqCaUA/edit?usp=sharing).
